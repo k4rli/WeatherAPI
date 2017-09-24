@@ -7,5 +7,5 @@ Purpose
 Purpose of this repository is to test out APIs and testing.
 
 Footnote
-===========
-IAY0361 Automatic testing, Tallinn University of Technology, 2017 autumn/winter
+---------------
+IAY0361 Automated testing, Tallinn University of Technology, 2017 autumn/winter
