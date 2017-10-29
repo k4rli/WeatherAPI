@@ -1,0 +1,8 @@
+Date: 2017-10-29, lowest temp: 3.41, highest temp: 3.84
+Date: 2017-10-30, lowest temp: 3.09, highest temp: 3.8
+Date: 2017-10-31, lowest temp: -0.33, highest temp: 4.23
+Date: 2017-11-01, lowest temp: 0.29, highest temp: 4.98
+Date: 2017-11-02, lowest temp: 6.1, highest temp: 9.48
+Date: 2017-11-03, lowest temp: 5.32, highest temp: 7.56
+Current temperature is 4.0 degrees.
+Location: Tallinn, EE; geo coordinates: 59.44, 24.75

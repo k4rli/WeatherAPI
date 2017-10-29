@@ -104,7 +104,7 @@ public class WeatherTest {
     @Test
     public void checkIfCoordinatesAreCorrectForCurrentWeather() throws Exception {
         try {
-            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsCurrent), "24.75, 59.44");
+            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsCurrent), "59.44, 59.4424.75");
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }
@@ -113,7 +113,7 @@ public class WeatherTest {
     @Test
     public void checkIfCoordinatesAreCorrectForForecast() throws Exception {
         try {
-            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsForecast), "24.7535, 59.437");
+            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsForecast), "59.437, 24.7535");
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }

@@ -1,6 +1,5 @@
 package org.owm;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -16,6 +15,7 @@ public class WeatherRequest {
 //        this.apiKey = apiKey;
 //    }
 
+    // type 0 - current weather, type 1 - 5-day weather forecast
     public static JSONObject getJSON(String city, String countryID, int type, String unit) {
         try {
             String url = "";
@@ -55,12 +55,12 @@ public class WeatherRequest {
     }
 
     public static void main(String[] args) {
-        System.out.println(getJSON("Tallinn", "EE", 0, "metric"));
-        System.out.println(getJSON("Tallinn", "EE", 1, "metric"));
-        JSONObject js = getJSON("Tallinn", "EE", 1, "metric");
-        System.out.println(js.get("city"));
-        for (int i = 0; i < 2; i++) {
-            System.out.println(js.getJSONObject("city").get("id"));
-        }
+//        System.out.println("1st json: " + getJSON("Tallinn", "EE", 0, "metric"));
+//        System.out.println("2nd json: " + getJSON("Tallinn", "EE", 1, "metric"));
+//        JSONObject js = getJSON("Tallinn", "EE", 1, "metric");
+//        System.out.println(js.get("city"));
+//        for (int i = 0; i < 2; i++) {
+//            System.out.println(js.getJSONObject("city").get("id"));
+//        }
     }
 }
