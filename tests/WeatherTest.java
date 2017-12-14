@@ -6,8 +6,8 @@ import org.owm.WeatherRequest;
 import static org.junit.Assert.*;
 
 public class WeatherTest {
-    private JSONObject jsCurrent = WeatherRequest.getJSON("Tallinn", "EE", 0, "metric");
-    private JSONObject jsForecast = WeatherRequest.getJSON("Tallinn", "EE", 1, "metric");
+    private JSONObject jsCurrent = WeatherRequest.getCurrentWeather("Tallinn");
+    private JSONObject jsForecast = WeatherRequest.getForecastWeather("Tallinn");
 
     @Test
     public void getCurrentTemp() {
@@ -104,7 +104,7 @@ public class WeatherTest {
     @Test
     public void checkIfCoordinatesAreCorrectForCurrentWeather() throws Exception {
         try {
-            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsCurrent), "59.44, 59.4424.75");
+            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsCurrent), "59.44, 24.75");
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }

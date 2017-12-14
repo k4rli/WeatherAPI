@@ -2,41 +2,52 @@ package org.owm;
 
 import org.json.JSONObject;
 import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class WeatherRequest {
     private static final String openWeatherMapCurrent = "https://api.openweathermap.org/data/2.5/weather?q=%s&units=%s";
-    private static final String openWeatherMap5Day = "https://api.openweathermap.org/data/2.5/forecast?q=%s,%s&units=%s";
+    private static final String openWeatherMap5Day = "https://api.openweathermap.org/data/2.5/forecast?q=%s&units=%s";
     private static String apiKey = "5d4f58cb84fdb1ecb383a02c099fd81c";
+    public static String inputFile = "src/org/owm/input.txt";
 
-//    public WeatherRequest(String apiKey) {
-//        this.apiKey = apiKey;
-//    }
-
-    // type 0 - current weather, type 1 - 5-day weather forecast
-    public static JSONObject getJSON(String city, String countryID, int type, String unit) {
-        try {
-            String url = "";
-            unit = unit.toLowerCase();
-
-            // checks if user wants current weather or a forecast
-            if (type == 0) {
-                url = openWeatherMapCurrent;
-            } else if (type == 1) {
-                url = openWeatherMap5Day;
+    public static List<String> readLinesFromFile(String fileName) {
+        List<String> listOfLines = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                listOfLines.add(line);
             }
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+        return listOfLines;
+    }
 
+    public static JSONObject getCurrentWeather(String city) {
+        JSONObject currentWeather = getJSON(city, openWeatherMapCurrent, "metric");
+        return currentWeather;
+    }
+
+    public static JSONObject getForecastWeather(String city) {
+        JSONObject forecastWeather = getJSON(city, openWeatherMap5Day, "metric");
+        return forecastWeather;
+    }
+
+    public static JSONObject getJSON(String city, String url, String unit) {
+        try {
+            unit = unit.toLowerCase();
             // opens connection to API url
-            URL apiURL = new URL(String.format(url, city, countryID, unit));
-
+            URL apiURL = new URL(String.format(url, city, unit));
             // starts request
             HttpURLConnection apiConnection = (HttpURLConnection) apiURL.openConnection();
-
             // request with API key
             apiConnection.addRequestProperty("x-api-key", apiKey);
-
             // reads from API
             BufferedReader reader = new BufferedReader(
                     new InputStreamReader(
@@ -47,20 +58,19 @@ public class WeatherRequest {
                 JSON.append(tmp).append("");
             }
             reader.close();
-
             return new JSONObject(JSON.toString());
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }
 
+
     public static void main(String[] args) {
-//        System.out.println("1st json: " + getJSON("Tallinn", "EE", 0, "metric"));
-//        System.out.println("2nd json: " + getJSON("Tallinn", "EE", 1, "metric"));
-//        JSONObject js = getJSON("Tallinn", "EE", 1, "metric");
-//        System.out.println(js.get("city"));
-//        for (int i = 0; i < 2; i++) {
-//            System.out.println(js.getJSONObject("city").get("id"));
-//        }
+        List<String> yea = readLinesFromFile(inputFile);
+        for (int i = 0; i < yea.size(); i++) {
+            System.out.println(yea.get(i));
+        }
+        System.out.println(getCurrentWeather("Tallinn"));
+        System.out.println(getForecastWeather("Tallinn"));
     }
 }

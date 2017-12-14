@@ -1,0 +1,7 @@
+Current temperature is 0.99°C.
+Location: Helsinki, FI; geo coordinates: 60.17, 24.94
+Date: 2017-12-13, lowest temp: 1.8°C, highest temp: 4.83°C
+Date: 2017-12-12, lowest temp: 2.29°C, highest temp: 6.17°C
+Date: 2017-12-15, lowest temp: 0.73°C, highest temp: 3.91°C
+Date: 2017-12-14, lowest temp: 0.28°C, highest temp: 4.78°C
+Date: 2017-12-16, lowest temp: 2.2°C, highest temp: 4.34°C

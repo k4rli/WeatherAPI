@@ -1,16 +1,12 @@
 package org.owm;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.*;
-import java.text.Collator;
 import java.util.*;
 
 public class WeatherInfo extends WeatherRequest {
-    public String city;
-    public String country;
-
+    // gets name of city from json, example: Tallinn
     public static String getCityFromJSON(JSONObject jsonObject) {
         String result;
         try {
@@ -20,7 +16,7 @@ public class WeatherInfo extends WeatherRequest {
         }
         return result;
     }
-
+    // gets country code from json, example: EE
     public static String getCountryFromJSON(JSONObject jsonObject) {
         String result;
         try {
@@ -30,17 +26,7 @@ public class WeatherInfo extends WeatherRequest {
         }
         return result;
     }
-
-    public static String getCountryIDFromJSON(JSONObject jsonObject) {
-        String result;
-        try {
-            result = jsonObject.getJSONObject("city").get("ID").toString();
-        } catch (JSONException e) {
-            result = jsonObject.get("ID").toString();
-        }
-        return result;
-    }
-
+    // gets coordinates from json, example: 59.44, 24.75
     public static String getCoordinatesFromJSON(JSONObject jsonObject) {
         String result;
         try {
@@ -52,11 +38,11 @@ public class WeatherInfo extends WeatherRequest {
         }
         return result;
     }
-
+    // gets current temp from json, example: -2.0
     public static Double getCurrentTempFromCurrentWeatherJSON(JSONObject jsonObject) {
-        Double result = 273.0;
+        Double result = null;
         try {
-            Double temp = Double.parseDouble(jsonObject.getJSONObject("main").get("temp").toString()) - 273.15;
+            Double temp = Double.parseDouble(jsonObject.getJSONObject("main").get("temp").toString());
             result = (double) Math.round(temp * 100) / 100;
         } catch (JSONException e) {
             System.out.println(e.getMessage());
@@ -90,62 +76,53 @@ public class WeatherInfo extends WeatherRequest {
         return datesAndTemperatures;
     }
 
-    public static void writeHighsAndLowsForEveryDayFromForecastToFile(Map<String, List<Double>> forecast) {
-        Writer writer;
-        try {
-            writer = new BufferedWriter(new OutputStreamWriter(
-                    new FileOutputStream("output.txt"), "utf-8"));
-            for (Map.Entry<String, List<Double>> entry : forecast.entrySet()) {
-                String key = entry.getKey();
-                Double max = Collections.max(entry.getValue());
-                Double min = Collections.min(entry.getValue());
-                writer.write("Date: " + key + ", lowest temp: " + min + ", highest temp: " + max + "\n");
-            }
-            writer.close();
-            sortFile("output.txt", "output.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public static String highsAndLowsForEveryDayFromForecastToFile(Map<String, List<Double>> forecast) {
+         StringBuffer output = new StringBuffer();
+         String result = "\n";
+         for (Map.Entry<String, List<Double>> entry : forecast.entrySet()) {
+             String key = entry.getKey();
+             Double max = Collections.max(entry.getValue());
+             Double min = Collections.min(entry.getValue());
+             output.append(result + "Date: " + key + ", lowest temp: " + min + "°C, highest temp: " + max + "°C");
+         }
+        return output.toString();
     }
 
-    public static void sortFile(String inputFileName, String outputFileName) throws IOException {
-        FileReader reader = new FileReader(inputFileName);
-        BufferedReader buffReader = new BufferedReader(reader);
-        List<String> lines = new ArrayList<>();
-        String line;
-
-        while ((line = buffReader.readLine()) != null) {
-            lines.add(line);
-        }
-        buffReader.close();
-        Collections.sort(lines, Collator.getInstance());
-        FileWriter writer = new FileWriter(outputFileName);
-
-        for (String str : lines) {
-            writer.write(str + "\n");
-        }
-        writer.close();
+    public static String currentTemp(JSONObject JSON) {
+        Double temp = getCurrentTempFromCurrentWeatherJSON(JSON);
+        return "Current temperature is " + temp + "°C.\n";
+    }
+    public static String locationAndCoords(JSONObject JSON) {
+        String city = getCityFromJSON(JSON);
+        String country = getCountryFromJSON(JSON);
+        String coordinates = getCoordinatesFromJSON(JSON);
+        return "Location: " + city + ", " + country + "; geo coordinates: " + coordinates;
     }
 
-    public static void getAllWeather(JSONObject currentWeather, JSONObject forecastWeather) {
+    // handles writing weather forecast and current info to specific file
+    public static void getAllWeather(JSONObject currentWeather, JSONObject forecastWeather, String outputFileName) {
         try {
-            BufferedWriter buffWriter = new BufferedWriter(new FileWriter("output.txt", true));
-            writeHighsAndLowsForEveryDayFromForecastToFile(getAllTempsForEveryDayFromForecastJSON(forecastWeather));
-            buffWriter.write("Current temperature is " + getCurrentTempFromCurrentWeatherJSON(currentWeather) +
-                                " degrees.\n");
-            buffWriter.write("Location: " + getCityFromJSON(currentWeather) + ", " +
-                    getCountryFromJSON(currentWeather) + "; geo coordinates: " + getCoordinatesFromJSON(currentWeather));
+            BufferedWriter buffWriter = new BufferedWriter(new FileWriter(outputFileName, false));
+            buffWriter.write(currentTemp(currentWeather));
+            buffWriter.write(locationAndCoords(currentWeather));
+            buffWriter.write(highsAndLowsForEveryDayFromForecastToFile(getAllTempsForEveryDayFromForecastJSON(forecastWeather)));
             buffWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+    }
+    public static void weatherForCitiesFromInput() {
+        List<String> cities = WeatherRequest.readLinesFromFile(inputFile);
+        for (String city : cities) {
+            JSONObject jsCurrent = WeatherRequest.getCurrentWeather(city);
+            JSONObject jsForecast = WeatherRequest.getForecastWeather(city);
+            getAllWeather(jsCurrent, jsForecast, "output/" + city + ".txt");
+        }
     }
 
-//    public static void main(String[] args) {
-//        JSONObject jsForecast = WeatherRequest.getJSON("Tallinn", "EE", 1, "metric");
-//        JSONObject jsCurrent = WeatherRequest.getJSON("Tallinn", "EE", 0, "metric");
-//        System.out.println(jsForecast);
-//        getAllWeather(jsCurrent, jsForecast);
-//    }
+    public static void main(String[] args) {
+        weatherForCitiesFromInput();
+        JSONObject jsForecast = WeatherRequest.getForecastWeather("Tallinn");
+        System.out.println(highsAndLowsForEveryDayFromForecastToFile(getAllTempsForEveryDayFromForecastJSON(jsForecast)));
+    }
 }

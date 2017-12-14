@@ -1,0 +1,7 @@
+Current temperature is 2.29°C.
+Location: Paris, FR; geo coordinates: 48.85, 2.35
+Date: 2017-12-13, lowest temp: 1.95°C, highest temp: 8.93°C
+Date: 2017-12-12, lowest temp: -0.25°C, highest temp: 4.18°C
+Date: 2017-12-15, lowest temp: 3.44°C, highest temp: 6.49°C
+Date: 2017-12-14, lowest temp: 5.63°C, highest temp: 8.55°C
+Date: 2017-12-16, lowest temp: 1.59°C, highest temp: 5.73°C
