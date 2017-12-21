@@ -1,68 +1,15 @@
 import org.json.JSONObject;
 import org.junit.Test;
-import org.owm.Weather;
 import org.owm.WeatherInfo;
 import org.owm.WeatherRequest;
 import static org.junit.Assert.*;
 
-public class WeatherTest {
-    private JSONObject jsCurrent = WeatherRequest.getCurrentWeather("Tallinn");
-    private JSONObject jsForecast = WeatherRequest.getForecastWeather("Tallinn");
+public class WeatherTest extends WeatherRequest {
+    private JSONObject jsCurrent = WeatherRequest.getWeatherJSON("Tallinn", openWeatherMapCurrent);
+    private JSONObject jsForecast = WeatherRequest.getWeatherJSON("Tallinn", openWeatherMap5Day);
 
     @Test
     public void getCurrentTemp() {
-    }
-
-    @Test
-    public void getThreeDayLowNotNull() {
-        try {
-            double low = Weather.getThreeDayLow();
-            assertFalse(Double.isNaN(low));
-        } catch (Exception e) {
-            fail("Error: " + e.getMessage());
-        }
-    }
-
-    @Test
-    public void getCurrentTempNotNull() {
-        try {
-            double current = Weather.getCurrentTemp();
-            assertFalse(Double.isNaN(current));
-        } catch (Exception e) {
-            fail("Error: " + e.getMessage());
-        }
-
-    }
-
-    @Test
-    public void getThreeDayHighNotNull() {
-        try {
-            double high = Weather.getThreeDayHigh();
-            assertFalse(Double.isNaN(high));
-        } catch (Exception e) {
-            fail("Error: " + e.getMessage());
-        }
-    }
-
-    @Test
-    public void getCoordinatesFormatCorrect(){
-        try {
-            String re = "^([0-9])+(:)+([0-9]+)";
-            String data = Weather.getCoordinates();
-            assertTrue(data.matches(re));
-        } catch (Exception e) {
-            fail("Error: " + e.getMessage());
-        }
-    }
-
-    @Test
-    public void getCoordinatesExist() {
-        try {
-            String data = Weather.getCoordinates();
-            assertTrue(!data.isEmpty());
-        } catch (Exception e) {
-            fail("Error: " + e.getMessage());
-        }
     }
 
     @Test
@@ -113,7 +60,7 @@ public class WeatherTest {
     @Test
     public void checkIfCoordinatesAreCorrectForForecast() throws Exception {
         try {
-            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsForecast), "59.437, 24.7535");
+            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsForecast), "59.4372, 24.7454");
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }

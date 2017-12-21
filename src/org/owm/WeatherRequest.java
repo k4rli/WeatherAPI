@@ -11,10 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WeatherRequest {
-    private static final String openWeatherMapCurrent = "https://api.openweathermap.org/data/2.5/weather?q=%s&units=%s";
-    private static final String openWeatherMap5Day = "https://api.openweathermap.org/data/2.5/forecast?q=%s&units=%s";
+    public static final String openWeatherMapCurrent = "https://api.openweathermap.org/data/2.5/weather?q=%s&units=%s";
+    public static final String openWeatherMap5Day = "https://api.openweathermap.org/data/2.5/forecast?q=%s&units=%s";
     private static String apiKey = "5d4f58cb84fdb1ecb383a02c099fd81c";
-    public static String inputFile = "src/org/owm/input.txt";
+    static String inputFile = "src/org/owm/input.txt";
 
     public static List<String> readLinesFromFile(String fileName) {
         List<String> listOfLines = new ArrayList<>();
@@ -29,14 +29,8 @@ public class WeatherRequest {
         return listOfLines;
     }
 
-    public static JSONObject getCurrentWeather(String city) {
-        JSONObject currentWeather = getJSON(city, openWeatherMapCurrent, "metric");
-        return currentWeather;
-    }
-
-    public static JSONObject getForecastWeather(String city) {
-        JSONObject forecastWeather = getJSON(city, openWeatherMap5Day, "metric");
-        return forecastWeather;
+    public static JSONObject getWeatherJSON(String city, String url) {
+        return getJSON(city, url, "metric");
     }
 
     public static JSONObject getJSON(String city, String url, String unit) {
@@ -66,11 +60,7 @@ public class WeatherRequest {
 
 
     public static void main(String[] args) {
-        List<String> yea = readLinesFromFile(inputFile);
-        for (int i = 0; i < yea.size(); i++) {
-            System.out.println(yea.get(i));
-        }
-        System.out.println(getCurrentWeather("Tallinn"));
-        System.out.println(getForecastWeather("Tallinn"));
+        System.out.println(getWeatherJSON("Tallinn", openWeatherMapCurrent));
+        System.out.println(getWeatherJSON("Tallinn", openWeatherMap5Day));
     }
 }

@@ -114,15 +114,15 @@ public class WeatherInfo extends WeatherRequest {
     public static void weatherForCitiesFromInput() {
         List<String> cities = WeatherRequest.readLinesFromFile(inputFile);
         for (String city : cities) {
-            JSONObject jsCurrent = WeatherRequest.getCurrentWeather(city);
-            JSONObject jsForecast = WeatherRequest.getForecastWeather(city);
+            JSONObject jsCurrent = WeatherRequest.getWeatherJSON(city ,openWeatherMapCurrent);
+            JSONObject jsForecast = WeatherRequest.getWeatherJSON(city, openWeatherMap5Day);
             getAllWeather(jsCurrent, jsForecast, "output/" + city + ".txt");
         }
     }
 
     public static void main(String[] args) {
         weatherForCitiesFromInput();
-        JSONObject jsForecast = WeatherRequest.getForecastWeather("Tallinn");
+        JSONObject jsForecast = WeatherRequest.getWeatherJSON("Tallinn", openWeatherMap5Day);
         System.out.println(highsAndLowsForEveryDayFromForecastToFile(getAllTempsForEveryDayFromForecastJSON(jsForecast)));
     }
 }
