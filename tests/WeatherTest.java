@@ -33,7 +33,7 @@ public class WeatherTest extends WeatherRequest {
     @Test
     public void checkIfJSONRightCountryForForecast() {
         try {
-            assertEquals(WeatherInfo.getCountryFromJSON(jsCurrent).toLowerCase(), "ee");
+            assertEquals(WeatherInfo.getCountryCodeFromJSON(jsCurrent).toLowerCase(), "ee");
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }
@@ -42,7 +42,7 @@ public class WeatherTest extends WeatherRequest {
     @Test
     public void checkIfJSONRightCountryForCurrentWeather() {
         try {
-            assertEquals(WeatherInfo.getCountryFromJSON(jsForecast).toLowerCase(), "ee");
+            assertEquals(WeatherInfo.getCountryCodeFromJSON(jsForecast).toLowerCase(), "ee");
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }
@@ -50,11 +50,7 @@ public class WeatherTest extends WeatherRequest {
 
     @Test
     public void checkIfCoordinatesAreCorrectForCurrentWeather() throws Exception {
-        try {
-            assertEquals(WeatherInfo.getCoordinatesFromJSON(jsCurrent), "59.44, 24.75");
-        } catch (Exception e) {
-            fail("Error: " + e.getMessage());
-        }
+        assertEquals(WeatherInfo.getCoordinatesFromJSON(jsCurrent), "59.44, 24.75");
     }
 
     @Test
@@ -64,5 +60,20 @@ public class WeatherTest extends WeatherRequest {
         } catch (Exception e) {
             fail("Error: " + e.getMessage());
         }
+    }
+
+    @Test
+    public void checkIfCoordinatesForCurrentWeather() throws Exception {
+        assertEquals(WeatherInfo.coordinatesIfCurrentWeather(jsCurrent), "59.44, 24.75");
+    }
+
+    @Test
+    public void checkIfCoordinatesForForecastWeather() throws Exception {
+        assertEquals(WeatherInfo.coordinatesIfForecastWeather(jsForecast), "59.4372, 24.7454");
+    }
+
+    @Test
+    public void getTemperatureFromJSONNotNaN() throws Exception {
+        assertNotEquals(WeatherInfo.getTemperatureFromDataPoint(jsCurrent), Double.NaN);
     }
 }

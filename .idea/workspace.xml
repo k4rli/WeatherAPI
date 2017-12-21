@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="691b7134-9a35-4e55-bb9e-3267f5b5aace" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Weather/org/owm/CurrentWeatherRepository.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Weather/org/owm/Weather.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Weather/org/owm/WeatherRequest.class" afterPath="$PROJECT_DIR$/out/production/Weather/org/owm/WeatherRequest.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Weather/org/owm/fiveDayWeatherRepo.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/test/Weather/WeatherTest.class" afterPath="$PROJECT_DIR$/out/test/Weather/WeatherTest.class" />
-      <change beforePath="$PROJECT_DIR$/src/org/owm/CurrentWeatherRepository.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/org/owm/Weather.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/output/Helsinki.txt" afterPath="$PROJECT_DIR$/output/Helsinki.txt" />
+      <change beforePath="$PROJECT_DIR$/output/Krakow.txt" afterPath="$PROJECT_DIR$/output/Krakow.txt" />
+      <change beforePath="$PROJECT_DIR$/output/London.txt" afterPath="$PROJECT_DIR$/output/London.txt" />
+      <change beforePath="$PROJECT_DIR$/output/New York.txt" afterPath="$PROJECT_DIR$/output/New York.txt" />
+      <change beforePath="$PROJECT_DIR$/output/Paris.txt" afterPath="$PROJECT_DIR$/output/Paris.txt" />
+      <change beforePath="$PROJECT_DIR$/output/Tallinn.txt" afterPath="$PROJECT_DIR$/output/Tallinn.txt" />
+      <change beforePath="$PROJECT_DIR$/output/Tokyo.txt" afterPath="$PROJECT_DIR$/output/Tokyo.txt" />
       <change beforePath="$PROJECT_DIR$/src/org/owm/WeatherInfo.java" afterPath="$PROJECT_DIR$/src/org/owm/WeatherInfo.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/owm/WeatherRequest.java" afterPath="$PROJECT_DIR$/src/org/owm/WeatherRequest.java" />
-      <change beforePath="$PROJECT_DIR$/src/org/owm/fiveDayWeatherRepo.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/org/owm/input.txt" afterPath="$PROJECT_DIR$/src/org/owm/input.txt" />
       <change beforePath="$PROJECT_DIR$/tests/WeatherTest.java" afterPath="$PROJECT_DIR$/tests/WeatherTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,8 +40,8 @@
       <file leaf-file-name="WeatherInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/org/owm/WeatherInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="595">
+              <caret line="131" column="35" lean-forward="true" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,23 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeatherTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Moscow.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/output/Moscow.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeatherTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/WeatherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/owm/input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="-139">
+              <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -113,11 +109,11 @@
         <option value="$PROJECT_DIR$/output/New York.txt" />
         <option value="$PROJECT_DIR$/output/Paris.txt" />
         <option value="$PROJECT_DIR$/output/London.txt" />
-        <option value="$PROJECT_DIR$/src/org/owm/input.txt" />
         <option value="$PROJECT_DIR$/tests/MockitoTest.java" />
         <option value="$PROJECT_DIR$/src/org/owm/Weather.java" />
-        <option value="$PROJECT_DIR$/src/org/owm/WeatherInfo.java" />
         <option value="$PROJECT_DIR$/src/org/owm/WeatherRequest.java" />
+        <option value="$PROJECT_DIR$/src/org/owm/WeatherInfo.java" />
+        <option value="$PROJECT_DIR$/src/org/owm/input.txt" />
         <option value="$PROJECT_DIR$/tests/WeatherTest.java" />
       </list>
     </option>
@@ -189,7 +185,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/json-20140107.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
@@ -219,7 +215,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WeatherTest.checkIfCoordinatesAreCorrectForForecast">
+  <component name="RunManager" selected="JUnit.WeatherTest.getDateFromJSONCorrect">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -280,14 +276,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForCurrentWeather" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherTest.checkIfCoordinatesForCurrentWeather" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Weather" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WeatherTest" />
-      <option name="METHOD_NAME" value="checkIfCoordinatesAreCorrectForCurrentWeather" />
+      <option name="METHOD_NAME" value="checkIfCoordinatesForCurrentWeather" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -300,14 +296,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForForecast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherTest.checkIfCoordinatesForForecastWeather" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Weather" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WeatherTest" />
-      <option name="METHOD_NAME" value="checkIfCoordinatesAreCorrectForForecast" />
+      <option name="METHOD_NAME" value="checkIfCoordinatesForForecastWeather" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -320,14 +316,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="WeatherTest.getCurrentTemp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WeatherTest.getDateFromJSONCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Weather" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WeatherTest" />
-      <option name="METHOD_NAME" value="getCurrentTemp" />
+      <option name="METHOD_NAME" value="getDateFromJSONCorrect" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -402,18 +398,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.WeatherTest" />
-      <item index="1" class="java.lang.String" itemvalue="Application.WeatherInfo" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesAreCorrectForCurrentWeather" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.WeatherTest.getCurrentTemp" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesAreCorrectForForecast" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesForCurrentWeather" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesForForecastWeather" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.WeatherTest.getDateFromJSONCorrect" />
+      <item index="4" class="java.lang.String" itemvalue="Application.WeatherInfo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesAreCorrectForForecast" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.WeatherTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.WeatherTest.getCurrentTemp" />
-        <item index="3" class="java.lang.String" itemvalue="Application.WeatherInfo" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesAreCorrectForCurrentWeather" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.WeatherTest.getDateFromJSONCorrect" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WeatherInfo" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesForForecastWeather" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.WeatherTest.checkIfCoordinatesForCurrentWeather" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.WeatherTest" />
       </list>
     </recent_temporary>
   </component>
@@ -441,44 +437,44 @@
       <workItem from="1513033617989" duration="7652000" />
       <workItem from="1513209743424" duration="31000" />
       <workItem from="1513209833893" duration="563000" />
-      <workItem from="1513848721663" duration="1028000" />
+      <workItem from="1513848721663" duration="2520000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WeatherTest - 2017.12.21 at 11h 37m 25s.xml">
-      <configuration name="WeatherTest" configurationId="JUnit" />
+    <history-entry file="WeatherTest_checkIfCoordinatesForCurrentWeather - 2017.12.21 at 12h 05m 23s.xml">
+      <configuration name="WeatherTest.checkIfCoordinatesForCurrentWeather" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest - 2017.12.21 at 11h 43m 29s.xml">
-      <configuration name="WeatherTest" configurationId="JUnit" />
+    <history-entry file="WeatherTest_checkIfCoordinatesForForecastWeather - 2017.12.21 at 12h 05m 44s.xml">
+      <configuration name="WeatherTest.checkIfCoordinatesForForecastWeather" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfCoordinatesAreCorrectForCurrentWeather - 2017.12.12 at 02h 30m 47s.xml">
-      <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForCurrentWeather" configurationId="JUnit" />
+    <history-entry file="WeatherTest_checkIfCoordinatesForForecastWeather - 2017.12.21 at 12h 05m 55s.xml">
+      <configuration name="WeatherTest.checkIfCoordinatesForForecastWeather" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfCoordinatesAreCorrectForCurrentWeather - 2017.12.12 at 03h 10m 24s.xml">
-      <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForCurrentWeather" configurationId="JUnit" />
+    <history-entry file="WeatherTest_checkIfCoordinatesForForecastWeather - 2017.12.21 at 12h 06m 05s.xml">
+      <configuration name="WeatherTest.checkIfCoordinatesForForecastWeather" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfCoordinatesAreCorrectForForecast - 2017.10.15 at 23h 44m 30s.xml">
-      <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForForecast" configurationId="JUnit" />
+    <history-entry file="WeatherTest_getDateFromJSONCorrect - 2017.12.21 at 12h 07m 33s.xml">
+      <configuration name="WeatherTest.getDateFromJSONCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfCoordinatesAreCorrectForForecast - 2017.10.15 at 23h 45m 13s.xml">
-      <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForForecast" configurationId="JUnit" />
+    <history-entry file="WeatherTest_getDateFromJSONCorrect - 2017.12.21 at 12h 08m 03s.xml">
+      <configuration name="WeatherTest.getDateFromJSONCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfCoordinatesAreCorrectForForecast - 2017.10.15 at 23h 45m 21s.xml">
-      <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForForecast" configurationId="JUnit" />
+    <history-entry file="WeatherTest_getDateFromJSONCorrect - 2017.12.21 at 12h 09m 01s.xml">
+      <configuration name="WeatherTest.getDateFromJSONCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfCoordinatesAreCorrectForForecast - 2017.12.21 at 11h 44m 06s.xml">
-      <configuration name="WeatherTest.checkIfCoordinatesAreCorrectForForecast" configurationId="JUnit" />
+    <history-entry file="WeatherTest_getDateFromJSONCorrect - 2017.12.21 at 12h 09m 47s.xml">
+      <configuration name="WeatherTest.getDateFromJSONCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_checkIfJSONRightCountryForForecast - 2017.10.15 at 23h 36m 57s.xml">
-      <configuration name="WeatherTest.checkIfJSONRightCountryForForecast" configurationId="JUnit" />
+    <history-entry file="WeatherTest_getDateFromJSONCorrect - 2017.12.21 at 12h 11m 25s.xml">
+      <configuration name="WeatherTest.getDateFromJSONCorrect" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="WeatherTest_getCurrentTemp - 2017.12.21 at 11h 37m 19s.xml">
-      <configuration name="WeatherTest.getCurrentTemp" configurationId="JUnit" />
+    <history-entry file="WeatherTest_getDateFromJSONCorrect - 2017.12.21 at 12h 12m 11s.xml">
+      <configuration name="WeatherTest.getDateFromJSONCorrect" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39722000" />
+    <option name="totallyTimeSpent" value="41214000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-357" width="2576" height="1426" extended-state="6" />
@@ -535,14 +531,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/output.txt" />
     <entry file="file://$PROJECT_DIR$/tests/WeatherTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
           <caret line="113" column="76" lean-forward="false" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -581,9 +574,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
           <caret line="113" column="76" lean-forward="false" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -621,9 +612,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1836">
           <caret line="113" column="76" lean-forward="false" selection-start-line="113" selection-start-column="76" selection-end-line="113" selection-end-column="76" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -674,9 +663,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="44" column="5" lean-forward="true" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -714,9 +701,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1717">
           <caret line="106" column="83" lean-forward="false" selection-start-line="106" selection-start-column="83" selection-end-line="106" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -754,9 +739,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1717">
           <caret line="106" column="83" lean-forward="true" selection-start-line="106" selection-start-column="83" selection-end-line="106" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -792,9 +775,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="34" column="38" lean-forward="false" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,9 +791,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
           <caret line="34" column="38" lean-forward="true" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -828,22 +807,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wordsnew.txt" />
     <entry file="file://$PROJECT_DIR$/London.txt" />
     <entry file="file://$PROJECT_DIR$/Tallinn.txt" />
-    <entry file="file://$PROJECT_DIR$/output/New York.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/output/Paris.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -881,14 +851,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/owm/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/owm/fiveDayWeatherRepo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -913,16 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/owm/WeatherInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/owm/WeatherRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -935,13 +887,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/WeatherTest.java">
+    <entry file="file://$PROJECT_DIR$/src/org/owm/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/owm/WeatherInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="131" column="35" lean-forward="true" selection-start-line="131" selection-start-column="35" selection-end-line="131" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/New York.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/WeatherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/output/Moscow.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

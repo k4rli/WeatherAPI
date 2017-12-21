@@ -1,7 +1,8 @@
-Current temperature is -1.01°C.
+Current temperature is 10.4°C.
 Location: London, GB; geo coordinates: 51.51, -0.13
-Date: 2017-12-13, lowest temp: 1.43°C, highest temp: 5.73°C
-Date: 2017-12-12, lowest temp: -6.69°C, highest temp: 0.93°C
-Date: 2017-12-15, lowest temp: -0.5°C, highest temp: 3.08°C
-Date: 2017-12-14, lowest temp: 2.36°C, highest temp: 4.85°C
-Date: 2017-12-16, lowest temp: -1.49°C, highest temp: 2.38°C
+Date: 2017-12-22, lowest temp: 7.36°C, highest temp: 9.85°C
+Date: 2017-12-21, lowest temp: 9.59°C, highest temp: 12.42°C
+Date: 2017-12-24, lowest temp: 8.85°C, highest temp: 10.91°C
+Date: 2017-12-23, lowest temp: 7.07°C, highest temp: 9.97°C
+Date: 2017-12-26, lowest temp: 3.06°C, highest temp: 6.15°C
+Date: 2017-12-25, lowest temp: 5.85°C, highest temp: 11.29°C

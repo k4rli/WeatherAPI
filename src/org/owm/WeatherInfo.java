@@ -16,13 +16,13 @@ public class WeatherInfo extends WeatherRequest {
         }
         return result;
     }
-    // gets country code from json, example: EE
-    public static String getCountryFromJSON(JSONObject jsonObject) {
+    // example: EE
+    public static String getCountryCodeFromJSON(JSONObject jsonObject) {
         String result;
         try {
-            result = jsonObject.getJSONObject("city").get("country").toString();
+            result = getCorrectCountryValue(jsonObject, "sys");
         } catch (JSONException e) {
-            result = jsonObject.getJSONObject("sys").get("country").toString();
+            result = getCorrectCountryValue(jsonObject, "city");
         }
         return result;
     }
@@ -30,19 +30,32 @@ public class WeatherInfo extends WeatherRequest {
     public static String getCoordinatesFromJSON(JSONObject jsonObject) {
         String result;
         try {
-            result = jsonObject.getJSONObject("city").getJSONObject("coord").get("lat").toString() + ", " +
-                    jsonObject.getJSONObject("city").getJSONObject("coord").get("lon").toString();
+            result = coordinatesIfCurrentWeather(jsonObject);
         } catch (JSONException e) {
-            result = jsonObject.getJSONObject("coord").get("lat").toString() + ", " +
-                    jsonObject.getJSONObject("coord").get("lon").toString();
+            result = coordinatesIfForecastWeather(jsonObject);
         }
         return result;
     }
+
+    public static String getCorrectCountryValue(JSONObject jsonObject, String value) {
+        return jsonObject.getJSONObject(value).get("country").toString();
+    }
+
+    public static String coordinatesIfCurrentWeather(JSONObject jsonObject) {
+        return jsonObject.getJSONObject("coord").get("lat").toString() + ", " +
+                jsonObject.getJSONObject("coord").get("lon").toString();
+    }
+
+    public static String coordinatesIfForecastWeather(JSONObject jsonObject) {
+        return jsonObject.getJSONObject("city").getJSONObject("coord").get("lat").toString() + ", " +
+                jsonObject.getJSONObject("city").getJSONObject("coord").get("lon").toString();
+    }
+
     // gets current temp from json, example: -2.0
     public static Double getCurrentTempFromCurrentWeatherJSON(JSONObject jsonObject) {
         Double result = null;
         try {
-            Double temp = Double.parseDouble(jsonObject.getJSONObject("main").get("temp").toString());
+            Double temp = getTemperatureFromDataPoint(jsonObject);
             result = (double) Math.round(temp * 100) / 100;
         } catch (JSONException e) {
             System.out.println(e.getMessage());
@@ -56,8 +69,8 @@ public class WeatherInfo extends WeatherRequest {
         try {
             for (int i = 0; i < dataPointArray.length(); i++) {
                 JSONObject dataPoint = dataPointArray.getJSONObject(i);
-                String date = dataPoint.get("dt_txt").toString().substring(0, 10);
-                Double temp = Double.parseDouble(dataPoint.getJSONObject("main").get("temp").toString());
+                String date = getDateFromDataPoint(dataPoint);
+                Double temp = getTemperatureFromDataPoint(dataPoint);
                 List<Double> tempList;
 
                 if (!datesAndTemperatures.containsKey(date)) {
@@ -76,6 +89,14 @@ public class WeatherInfo extends WeatherRequest {
         return datesAndTemperatures;
     }
 
+    public static String getDateFromDataPoint(JSONObject jsonObject) {
+        return jsonObject.get("dt_txt").toString().substring(0, 10);
+    }
+
+    public static double getTemperatureFromDataPoint(JSONObject jsonObject) {
+        return Double.parseDouble(jsonObject.getJSONObject("main").get("temp").toString());
+    }
+
     public static String highsAndLowsForEveryDayFromForecastToFile(Map<String, List<Double>> forecast) {
          StringBuffer output = new StringBuffer();
          String result = "\n";
@@ -88,23 +109,20 @@ public class WeatherInfo extends WeatherRequest {
         return output.toString();
     }
 
-    public static String currentTemp(JSONObject JSON) {
-        Double temp = getCurrentTempFromCurrentWeatherJSON(JSON);
-        return "Current temperature is " + temp + "°C.\n";
+    public static String currentTempAsString(JSONObject JSON) {
+        return "Current temperature is " + getCurrentTempFromCurrentWeatherJSON(JSON) + "°C.\n";
     }
-    public static String locationAndCoords(JSONObject JSON) {
-        String city = getCityFromJSON(JSON);
-        String country = getCountryFromJSON(JSON);
-        String coordinates = getCoordinatesFromJSON(JSON);
-        return "Location: " + city + ", " + country + "; geo coordinates: " + coordinates;
+    public static String getLocationAndCoordinatesFromJSON(JSONObject JSON) {
+        return "Location: " + getCityFromJSON(JSON) + ", " + getCountryCodeFromJSON(JSON) + "; geo coordinates: " +
+                getCoordinatesFromJSON(JSON);
     }
 
     // handles writing weather forecast and current info to specific file
     public static void getAllWeather(JSONObject currentWeather, JSONObject forecastWeather, String outputFileName) {
         try {
             BufferedWriter buffWriter = new BufferedWriter(new FileWriter(outputFileName, false));
-            buffWriter.write(currentTemp(currentWeather));
-            buffWriter.write(locationAndCoords(currentWeather));
+            buffWriter.write(currentTempAsString(currentWeather));
+            buffWriter.write(getLocationAndCoordinatesFromJSON(currentWeather));
             buffWriter.write(highsAndLowsForEveryDayFromForecastToFile(getAllTempsForEveryDayFromForecastJSON(forecastWeather)));
             buffWriter.close();
         } catch (IOException e) {

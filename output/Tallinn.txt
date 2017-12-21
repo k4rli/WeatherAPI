@@ -1,7 +1,8 @@
-Current temperature is -2.0°C.
+Current temperature is 4.0°C.
 Location: Tallinn, EE; geo coordinates: 59.44, 24.75
-Date: 2017-12-13, lowest temp: 1.08°C, highest temp: 3.75°C
-Date: 2017-12-12, lowest temp: -0.2°C, highest temp: 6.15°C
-Date: 2017-12-15, lowest temp: -1.37°C, highest temp: 2.71°C
-Date: 2017-12-14, lowest temp: -2.09°C, highest temp: 2.83°C
-Date: 2017-12-16, lowest temp: 0.11°C, highest temp: 1.16°C
+Date: 2017-12-22, lowest temp: -0.32°C, highest temp: 2.0°C
+Date: 2017-12-21, lowest temp: 0.2°C, highest temp: 3.33°C
+Date: 2017-12-24, lowest temp: 0.72°C, highest temp: 3.57°C
+Date: 2017-12-23, lowest temp: -1.6°C, highest temp: 3.85°C
+Date: 2017-12-26, lowest temp: 1.28°C, highest temp: 1.91°C
+Date: 2017-12-25, lowest temp: -0.06°C, highest temp: 2.62°C
