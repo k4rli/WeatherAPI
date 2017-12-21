@@ -6,3 +6,4 @@ Tokyo
 Helsinki
 Krakow
 Moscow
+Hong Kong

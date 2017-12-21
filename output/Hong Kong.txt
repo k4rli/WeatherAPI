@@ -1,0 +1,8 @@
+Current temperature is 17.04°C.
+Location: Hong Kong, CN; geo coordinates: 22.28, 114.16
+Date: 2017-12-22, lowest temp: 16.86°C, highest temp: 18.18°C
+Date: 2017-12-21, lowest temp: 16.55°C, highest temp: 17.24°C
+Date: 2017-12-24, lowest temp: 15.72°C, highest temp: 20.31°C
+Date: 2017-12-23, lowest temp: 17.2°C, highest temp: 19.31°C
+Date: 2017-12-26, lowest temp: 17.25°C, highest temp: 19.14°C
+Date: 2017-12-25, lowest temp: 15.17°C, highest temp: 18.14°C
