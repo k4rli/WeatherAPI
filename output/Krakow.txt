@@ -1,8 +1,8 @@
-Current temperature is 0.0°C.
+Current temperature is 8.0°C.
 Location: Krakow, PL; geo coordinates: 50.06, 19.94
-Date: 2017-12-22, lowest temp: -0.21°C, highest temp: 0.28°C
-Date: 2017-12-21, lowest temp: 0.35°C, highest temp: 1.96°C
-Date: 2017-12-24, lowest temp: 2.55°C, highest temp: 4.42°C
-Date: 2017-12-23, lowest temp: 0.04°C, highest temp: 2.13°C
-Date: 2017-12-26, lowest temp: -4.83°C, highest temp: 1.64°C
-Date: 2017-12-25, lowest temp: -2.83°C, highest temp: 4.52°C
+Date: 2017-12-30, lowest temp: -2.65°C, highest temp: 0.53°C
+Date: 2017-12-26, lowest temp: -4.63°C, highest temp: 4.64°C
+Date: 2017-12-25, lowest temp: -2.02°C, highest temp: 4.94°C
+Date: 2017-12-28, lowest temp: 1.08°C, highest temp: 7.65°C
+Date: 2017-12-27, lowest temp: -5.32°C, highest temp: 6.78°C
+Date: 2017-12-29, lowest temp: -3.28°C, highest temp: -0.24°C

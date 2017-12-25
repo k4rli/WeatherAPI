@@ -1,8 +1,8 @@
-Current temperature is 6.72°C.
+Current temperature is 6.69°C.
 Location: Tokyo, JP; geo coordinates: 35.68, 139.76
-Date: 2017-12-22, lowest temp: 1.62°C, highest temp: 8.29°C
-Date: 2017-12-21, lowest temp: 2.92°C, highest temp: 4.83°C
-Date: 2017-12-24, lowest temp: 6.9°C, highest temp: 15.12°C
-Date: 2017-12-23, lowest temp: 2.28°C, highest temp: 10.51°C
-Date: 2017-12-26, lowest temp: 6.2°C, highest temp: 10.18°C
-Date: 2017-12-25, lowest temp: 3.17°C, highest temp: 12.91°C
+Date: 2017-12-30, lowest temp: 6.41°C, highest temp: 11.63°C
+Date: 2017-12-26, lowest temp: 3.85°C, highest temp: 11.35°C
+Date: 2017-12-25, lowest temp: 3.69°C, highest temp: 5.68°C
+Date: 2017-12-28, lowest temp: 3.53°C, highest temp: 8.63°C
+Date: 2017-12-27, lowest temp: 2.79°C, highest temp: 9.21°C
+Date: 2017-12-29, lowest temp: 4.75°C, highest temp: 10.63°C

@@ -1,8 +1,8 @@
-Current temperature is -0.38°C.
+Current temperature is -7.94°C.
 Location: Moscow, US; geo coordinates: 46.73, -117
-Date: 2017-12-22, lowest temp: -3.09°C, highest temp: -0.76°C
-Date: 2017-12-21, lowest temp: -2.77°C, highest temp: 0.24°C
-Date: 2017-12-24, lowest temp: -16.87°C, highest temp: -6.28°C
-Date: 2017-12-23, lowest temp: -10.26°C, highest temp: -1.72°C
-Date: 2017-12-26, lowest temp: -7.34°C, highest temp: -6.23°C
-Date: 2017-12-25, lowest temp: -9.09°C, highest temp: -5.88°C
+Date: 2017-12-30, lowest temp: 3.98°C, highest temp: 5.93°C
+Date: 2017-12-26, lowest temp: -11.02°C, highest temp: -4.63°C
+Date: 2017-12-25, lowest temp: -8.09°C, highest temp: -6.69°C
+Date: 2017-12-28, lowest temp: -6.59°C, highest temp: 1.75°C
+Date: 2017-12-27, lowest temp: -10.31°C, highest temp: -6.71°C
+Date: 2017-12-29, lowest temp: 0.22°C, highest temp: 5.05°C

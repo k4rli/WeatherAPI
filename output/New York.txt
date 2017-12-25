@@ -1,8 +1,8 @@
-Current temperature is -1.28°C.
+Current temperature is 1.5°C.
 Location: New York, US; geo coordinates: 40.73, -73.99
-Date: 2017-12-22, lowest temp: -1.56°C, highest temp: 9.48°C
-Date: 2017-12-21, lowest temp: -2.09°C, highest temp: 2.32°C
-Date: 2017-12-24, lowest temp: 3.27°C, highest temp: 6.97°C
-Date: 2017-12-23, lowest temp: 3.6°C, highest temp: 6.65°C
-Date: 2017-12-26, lowest temp: -3.89°C, highest temp: -1.43°C
-Date: 2017-12-25, lowest temp: -0.3°C, highest temp: 2.22°C
+Date: 2017-12-30, lowest temp: -11.32°C, highest temp: -9.7°C
+Date: 2017-12-26, lowest temp: -4.62°C, highest temp: -0.62°C
+Date: 2017-12-25, lowest temp: -0.45°C, highest temp: 0.1°C
+Date: 2017-12-28, lowest temp: -8.48°C, highest temp: -6.11°C
+Date: 2017-12-27, lowest temp: -6.63°C, highest temp: -3.13°C
+Date: 2017-12-29, lowest temp: -10.34°C, highest temp: -7.7°C

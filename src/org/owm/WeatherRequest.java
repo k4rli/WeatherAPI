@@ -60,7 +60,7 @@ public class WeatherRequest {
 
 
     public static void main(String[] args) {
-        System.out.println(getWeatherJSON("Tallinn", openWeatherMapCurrent));
-        System.out.println(getWeatherJSON("Tallinn", openWeatherMap5Day));
+//        System.out.println(getWeatherJSON("Tallinn", openWeatherMapCurrent));
+//        System.out.println(getWeatherJSON("Tallinn", openWeatherMap5Day));
     }
 }
