@@ -139,12 +139,7 @@ public class WeatherInfo extends WeatherRequest {
     }
 
     public static void main(String[] args) {
-        weatherForCitiesFromInput();
-        JSONObject jsForecast = WeatherRequest.getWeatherJSON("Tallinn", openWeatherMap5Day);
-//        JSONObject forecastFatHead = WeatherRequest.getWeatherJSON("London", openWeatherMap5Day);
-//        JSONObject currentExtraFatHead = WeatherRequest.getWeatherJSON("London", openWeatherMapCurrent);
-//        System.out.println(forecastFatHead);
-//        System.out.println(currentExtraFatHead);
-//        System.out.println(highsAndLowsForEveryDayFromForecastToFile(getAllTempsForEveryDayFromForecastJSON(jsForecast)));
+//        weatherForCitiesFromInput();
+//        JSONObject jsForecast = WeatherRequest.getWeatherJSON("Tallinn", openWeatherMap5Day);
     }
 }
